@@ -2,12 +2,12 @@ import smtplib
 import myTest
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart 
-#import secret as sc
-
+#import secret
 username = myTest.username
 password = myTest.password
 email = myTest.email
-def send_mail(from_email = email, text="Email Body", subject="Hello World", to_emails=None, html=None):
+
+def send_mail(from_email = email, html=None, subject="Hello World", to_emails=None, text=""):
     assert isinstance(to_emails, list)
     msg = MIMEMultipart('alternative')
     msg['From']= from_email
@@ -32,3 +32,4 @@ def send_mail(from_email = email, text="Email Body", subject="Hello World", to_e
 #    with smtplib.SMTP() as server:
 #        server.quit()
 #        pass
+
