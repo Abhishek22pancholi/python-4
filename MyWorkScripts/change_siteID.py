@@ -5,7 +5,7 @@ import zipfile
 #Deklaracja funkci i  parametrów
 def change_SiteId(new_SiteId):
 #Konfiguracja
-file_to_edit = 'enty'
+    file_to_edit = 'enty'
 #Wygenerwoanie oraz przypisanie do listy elementów zip znajdujących się w folderze
     file_list = [f for f in os.listdir(path='.') if zipfile.is_zipfile(os.path.join('.',f))]
 #Pętla po lsicie plików
